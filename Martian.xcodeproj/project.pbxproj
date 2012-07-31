@@ -25,7 +25,7 @@
 		04B5B4C115C72BFC005FE07E /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5B4B315C72BCF005FE07E /* SBJsonTokeniser.m */; };
 		04B5B4C215C72BFD005FE07E /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5B4B515C72BCF005FE07E /* SBJsonUTF8Stream.m */; };
 		04B5B4C315C72BFF005FE07E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5B4B715C72BCF005FE07E /* SBJsonWriter.m */; };
-		04B5B4C615C73E91005FE07E /* RedditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B5B4C515C73E7C005FE07E /* RedditController.m */; };
+		04C1456E15C77F0D00367932 /* PostSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1456D15C77F0800367932 /* PostSelectionController.m */; };
 		04ED31FC15C495F200BB265D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ED31FB15C495F200BB265D /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +69,8 @@
 		04B5B4B515C72BCF005FE07E /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = Martian/SBJason/SBJsonUTF8Stream.m; sourceTree = SOURCE_ROOT; };
 		04B5B4B615C72BCF005FE07E /* SBJsonWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = Martian/SBJason/SBJsonWriter.h; sourceTree = SOURCE_ROOT; };
 		04B5B4B715C72BCF005FE07E /* SBJsonWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = Martian/SBJason/SBJsonWriter.m; sourceTree = SOURCE_ROOT; };
-		04B5B4C415C73E7C005FE07E /* RedditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RedditController.h; path = Martian/RedditController.h; sourceTree = SOURCE_ROOT; };
-		04B5B4C515C73E7C005FE07E /* RedditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RedditController.m; path = Martian/RedditController.m; sourceTree = SOURCE_ROOT; };
+		04C1456C15C77F0800367932 /* PostSelectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PostSelectionController.h; path = Martian/PostSelectionController.h; sourceTree = SOURCE_ROOT; };
+		04C1456D15C77F0800367932 /* PostSelectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PostSelectionController.m; path = Martian/PostSelectionController.m; sourceTree = SOURCE_ROOT; };
 		04E07BC215C6EEE6000079BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AppDelegate.h; path = Martian/AppDelegate.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		04E07BC315C6EEE6000079BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AppDelegate.m; path = Martian/AppDelegate.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		04E07BCB15C6EEE6000079BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Martian/main.m; sourceTree = SOURCE_ROOT; };
@@ -104,7 +104,6 @@
 			children = (
 				04E07BC215C6EEE6000079BD /* AppDelegate.h */,
 				04E07BC315C6EEE6000079BD /* AppDelegate.m */,
-				04B5B47015C70021005FE07E /* Backend */,
 				048D056115C60A7600B43974 /* Interface */,
 			);
 			name = Martian;
@@ -114,22 +113,11 @@
 		048D056115C60A7600B43974 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				04C1456815C77ED700367932 /* Sub Selection */,
+				04C1456715C77EC900367932 /* Main Selection */,
 				0421102A15C6F21300195D4A /* MainMenu.xib */,
-				04E07BCE15C6EEE6000079BD /* MainSelectionController.h */,
-				04E07BCF15C6EEE6000079BD /* MainSelectionController.m */,
-				04E07BD015C6EEE6000079BD /* REOutlineView.h */,
-				04E07BD115C6EEE6000079BD /* REOutlineView.m */,
 			);
 			name = Interface;
-			sourceTree = "<group>";
-		};
-		04B5B47015C70021005FE07E /* Backend */ = {
-			isa = PBXGroup;
-			children = (
-				04B5B4C415C73E7C005FE07E /* RedditController.h */,
-				04B5B4C515C73E7C005FE07E /* RedditController.m */,
-			);
-			name = Backend;
 			sourceTree = "<group>";
 		};
 		04B5B49D15C72B83005FE07E /* Junk */ = {
@@ -172,6 +160,26 @@
 				04B5B4B715C72BCF005FE07E /* SBJsonWriter.m */,
 			);
 			name = SBJason;
+			sourceTree = "<group>";
+		};
+		04C1456715C77EC900367932 /* Main Selection */ = {
+			isa = PBXGroup;
+			children = (
+				04E07BCE15C6EEE6000079BD /* MainSelectionController.h */,
+				04E07BCF15C6EEE6000079BD /* MainSelectionController.m */,
+				04E07BD015C6EEE6000079BD /* REOutlineView.h */,
+				04E07BD115C6EEE6000079BD /* REOutlineView.m */,
+			);
+			name = "Main Selection";
+			sourceTree = "<group>";
+		};
+		04C1456815C77ED700367932 /* Sub Selection */ = {
+			isa = PBXGroup;
+			children = (
+				04C1456C15C77F0800367932 /* PostSelectionController.h */,
+				04C1456D15C77F0800367932 /* PostSelectionController.m */,
+			);
+			name = "Sub Selection";
 			sourceTree = "<group>";
 		};
 		04ED31EC15C495F200BB265D = {
@@ -288,8 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1456E15C77F0D00367932 /* PostSelectionController.m in Sources */,
 				0421102915C6F1FC00195D4A /* main.m in Sources */,
-				04B5B4C615C73E91005FE07E /* RedditController.m in Sources */,
 				0421102315C6F1A900195D4A /* AppDelegate.m in Sources */,
 				0421102215C6F1A400195D4A /* REOutlineView.m in Sources */,
 				0421102115C6F1A300195D4A /* MainSelectionController.m in Sources */,

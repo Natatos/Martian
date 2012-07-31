@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @implementation MainSelectionController
-@synthesize data, mainSelectionOutline, redditController, treeController;
+@synthesize data, mainSelectionOutline, postSelectionController;
 
 - (void)awakeFromNib
 {
@@ -21,8 +21,6 @@
 {
     if (self == [super self])
     {
-        redditController = [RedditController new];
-        
         if (![[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"])
         {
             NSMutableDictionary * dataPlist = [NSMutableDictionary new];
@@ -208,7 +206,7 @@
     if ([execptions containsObject:item])
         return NO;
     
-    [NSThread detachNewThreadSelector:@selector(willDisplayViewForItem:) toTarget:redditController withObject:item];
+    [NSThread detachNewThreadSelector:@selector(willDisplayViewForItem:) toTarget:postSelectionController withObject:item];
     
     return YES;
 }

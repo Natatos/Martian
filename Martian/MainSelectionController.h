@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RedditController.h"
+#import "PostSelectionController.h"
 
 @interface MainSelectionController : NSObject <NSOutlineViewDelegate, NSOutlineViewDataSource>
 {
@@ -15,12 +15,10 @@
     NSTableCellView * rowToRemove;
 }
 
-@property (strong) NSMutableDictionary * data;
-
 @property (assign) IBOutlet NSOutlineView * mainSelectionOutline;
+@property (assign) IBOutlet PostSelectionController * postSelectionController;
 
-@property (strong) RedditController * redditController;
-@property (strong) NSTreeController * treeController;
+@property (strong) NSMutableDictionary * data;
 
 - (NSTableCellView*)rowForIndex:(NSInteger)index;
 
