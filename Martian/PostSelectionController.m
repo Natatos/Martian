@@ -26,8 +26,10 @@
 {
     NSTableCellView * aView = [postSelectionTable makeViewWithIdentifier:[tableColumn identifier] owner:self];
     
-    [(NSTextField*)[self viewForIdentifier:@"userField" ofSuperview:aView] setStringValue:[[[data objectAtIndex:row] objectForKey:@"data"] objectForKey:@"author"]];
     [(NSTextField*)[self viewForIdentifier:@"postField" ofSuperview:aView] setStringValue:[[[data objectAtIndex:row] objectForKey:@"data"] objectForKey:@"title"]];
+    //Setting Author
+    NSString *author = [NSString stringWithFormat:@"Submitted by: %@", [[[data objectAtIndex:row] objectForKey:@"data"] objectForKey:@"author"]];
+    [(NSTextField*)[self viewForIdentifier:@"userField" ofSuperview:aView] setStringValue:author];
     return aView;
     
 }
